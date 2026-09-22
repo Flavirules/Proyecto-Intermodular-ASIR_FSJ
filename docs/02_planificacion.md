@@ -25,3 +25,5 @@ Para llevar a cabo la implementación se han requerido los siguientes recursos t
 * **Software**: Ubuntu Server, Apache2, MariaDB/MySQL y PHP (Stack LAMP).
 * **Infraestructura de Red**: Switch gestionable L3 y Router Cisco.
 * **Herramientas de gestión**: Cliente SSH (PuTTY/Termius), DBeaver para la gestión de la BD y un editor de código.
+
+*Documentación de la fase de planificacion finalizada.*
