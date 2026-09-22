@@ -1,0 +1,11 @@
+site_name: Proyecto Intermodular ASIR - Cursos de Cocina
+
+nav:
+  - Inicio: index.md
+  - Introducción: 01_introduccion.md
+  - Planificación: 02_planificacion.md
+  - Desarrollo (Sistemas y Redes): 03_desarrollo_sistemas_y_redes.md
+  - Desarrollo (Web y Seguridad): 04_desarrollo_web_y_seguridad.md
+  - Lenguaje de Marcas y Empleabilidad: 05_empleabilidad_y_riesgos.md
+  - Resultados y Conclusiones: 06_resultados_y_conclusiones.md
+  - Anexos: 07_anexos.md
