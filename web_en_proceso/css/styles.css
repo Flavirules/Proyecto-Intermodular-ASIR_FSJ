@@ -1,0 +1,586 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(90deg, #6d6d6d, #020202);
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+nav>a {
+    color: #c5103d;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.logo>img {
+    height: 100px;
+    border-radius: 10px;
+}
+
+.Titulo {
+    font-size: 50px;
+    font-style: normal;
+    color: #c7c7c6;
+    font-weight: 500;
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.boton-nav {
+    padding: 15px 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.boton-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.boton-nav:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgb(75, 193, 77);
+    transform: scale(1.05);
+}
+
+.boton-nav:hover a {
+    color: #076725;
+}
+
+main {
+    flex: 1;
+    padding: 60px 5%;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #359b2b;
+}
+
+.ordenado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto 60px auto;
+}
+
+.orden {
+    display: contents;
+}
+
+.card {
+    background: #b6af4673;
+    border-radius: 12px;
+    width: 450px;
+    height: 220px;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    gap: 20px;
+    text-align: left;
+}
+.card1 {
+    background: #a1c6e4cb;
+    border-radius: 12px;
+    width: 450px;
+    height: 220px;
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    gap: 20px;
+    text-align: left;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #a65146;
+    flex-shrink: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.card-content .descripcion {
+    font-size: 15px;
+    color: #555;
+    margin: 10px 0;
+    flex-grow: 1;
+}
+
+.card-content .nota {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.promociones .promo {
+    border: 3px solid #359b2b;
+    background: linear-gradient(135deg, #359b2b, #0c2f09);
+    color: white;
+}
+
+.promociones .promo p {
+    color: white;
+    font-size: 18px;
+}
+
+.promo-top {
+    justify-content: center;
+}
+
+.promo-bottom {
+    justify-content: center;
+    gap: 80px;
+}
+
+.tabla-nutricional {
+    width: 100%;
+    padding: 40px 8%;
+    background: #f8f8f8;
+}
+
+.tabla-nutricional h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.tabla-nutricional table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.tabla-nutricional thead {
+    background: linear-gradient(90deg, #000000, #011301);
+    color: white;
+}
+
+.tabla-nutricional th {
+    padding: 14px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.tabla-nutricional td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla-nutricional td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabla-nutricional tbody tr:hover {
+    background: #f2e9ff;
+    transition: 0.2s;
+}
+
+@media (max-width: 900px) {
+    .tabla-nutricional {
+        overflow-x: auto;
+    }
+    .tabla-nutricional table {
+        min-width: 800px;
+    }
+}
+
+.contenedor-formulario {
+    width: 60%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contenedor-formulario h2 {
+    color: #359b2b;
+}
+
+.contenedor-formulario fieldset {
+    border: 2px solid #359b2b;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.contenedor-formulario legend {
+    font-weight: bold;
+    color: #1a4802;
+    padding: 0 10px;
+}
+
+.contenedor-formulario label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contenedor-formulario input,
+.contenedor-formulario select,
+.contenedor-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.contenedor-formulario input:focus,
+.contenedor-formulario select:focus,
+.contenedor-formulario textarea:focus {
+    border: 1px solid #359b2b;
+    box-shadow: 0 0 8px rgba(53, 155, 43, 0.3);
+}
+
+.contenedor-formulario textarea {
+    resize: vertical;
+}
+
+.contenedor-formulario input[type="radio"],
+.contenedor-formulario input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.botones-formulario {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.botones-formulario input {
+    width: 170px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enviar-form {
+    background-color: #76e244;
+    color: white;
+}
+
+.enviar-form:hover {
+    background-color: #1a4802;
+    transform: scale(1.05);
+}
+
+.reset-form {
+    background-color: #dcdcdc;
+}
+
+.reset-form:hover {
+    background-color: #b5b5b5;
+    transform: scale(1.05);
+}
+
+.index {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Se ajusta al alto de la pantalla */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Por si el video tarda en cargar */
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    /* Centra el video perfectamente */
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0; /* Capa base */
+}
+
+.index-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    
+    /* Color de fondo semitranslúcido (Negro con 50% de opacidad) */
+    background-color: rgba(0, 0, 0, 0.5); 
+    
+    /* Espaciado interno para que el texto no toque los bordes del fondo */
+    padding: 2rem;
+    border-radius: 15px;
+    
+    /* EFECTO EXTRA: Desenfoque de fondo (estilo iOS/Glassmorphism) */
+    backdrop-filter: blur(10px);
+    
+    /* Ajuste de ancho para que no ocupe toda la pantalla de lado a lado */
+    max-width: 80%;
+    margin: 0 auto;
+    
+    /* Borde sutil para dar profundidad */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.fondo {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ffcc00;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+.destacados, .ofertas {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(90deg, #000000, #092911);
+    color: white;
+    padding: 25px 8%;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.social span {
+    font-size: 14px;
+}
+/* Contenedor principal */
+.contenedor-corea {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f9f4f0; /* Un fondo crema suave */
+    min-height: 100vh;
+}
+
+/* Tarjeta del curso (Sección) */
+.platos-corea {
+    display: flex;
+    align-items: center; /* Alinea verticalmente imagen y texto */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 900px;
+    overflow: hidden; /* Para que la imagen respete las esquinas redondeadas */
+    padding: 0;
+}
+
+/* Estilo de la Imagen */
+.platos-corea img {
+    width: 450px; /* Tamaño fijo para la imagen */
+    height: 400px;
+    object-fit: cover; /* Evita que la foto se deforme */
+    display: block;
+}
+
+/* Contenedor de texto (el div "perro") */
+.perro {
+    padding: 40px;
+    flex: 1; /* Ocupa el espacio restante */
+}
+
+/* Tipografía y Textos */
+.perro h2 {
+    color: #d32f2f; /* Un rojo elegante inspirado en la bandera coreana */
+    margin-top: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.perro h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilo de la lista */
+.perro ul {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+}
+
+.perro li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #555;
+    display: flex;
+    justify-content: space-between; /* Separa el nombre español del coreano */
+    padding-right: 10px;
+}
+
+/* Añadimos un pequeño detalle antes de cada plato */
+.perro li::before {
+    content: "•";
+    color: #d32f2f;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Responsive: si la pantalla es pequeña, se pone uno debajo del otro */
+@media (max-width: 768px) {
+    .platos-corea {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .platos-corea img {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .perro li {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+.social>a {
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social>a:hover {
+    color: #359b2b;
+    transform: scale(1.15);
+}
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+    transition: transform 0.2s ease; 
+}
+
+
+.card-link:hover .card {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.nutricion>a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #359b2b;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.nutricion>a:hover {
+    background-color: #359b2b;
+}
+
+.map>iframe {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.legal {
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: 15px;
+}
