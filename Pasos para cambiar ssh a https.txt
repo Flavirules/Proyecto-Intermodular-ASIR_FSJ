@@ -1,0 +1,3 @@
+git remote -v
+git remote set-url origin https://github.com
+PAT: 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
