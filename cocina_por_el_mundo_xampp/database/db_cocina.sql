@@ -15,8 +15,6 @@ DROP TABLE IF EXISTS cocineros;
 DROP TABLE IF EXISTS usuarios;
 SET FOREIGN_KEY_CHECKS = 1;
 
--- Usuarios: las compras pueden crear un alumno sin contraseña.
--- password_hash solo se rellena para cuentas que necesiten iniciar sesión.
 CREATE TABLE usuarios (
     id_user INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -68,7 +66,6 @@ CREATE TABLE proveedores (
     telefono VARCHAR(20) NULL
 ) ENGINE=InnoDB;
 
--- Esta tabla conserva la relación con proveedores del modelo del documento.
 CREATE TABLE pedidos (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_proveedor INT NOT NULL,
@@ -78,7 +75,6 @@ CREATE TABLE pedidos (
       REFERENCES proveedores(id_proveedor) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- Compras de cursos: pago simulado, no se realiza ningún cobro real.
 CREATE TABLE compras (
     id_compra INT AUTO_INCREMENT PRIMARY KEY,
     codigo_compra VARCHAR(32) NOT NULL UNIQUE,
@@ -132,7 +128,6 @@ CREATE TABLE recetas (
       REFERENCES cursos(id_curso) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
--- Los CV se cifran con AES-256-GCM en disco. En la BD solo se almacena la ruta.
 CREATE TABLE candidaturas (
     id_candidatura INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(120) NOT NULL,
@@ -153,7 +148,6 @@ CREATE TABLE candidaturas (
     INDEX idx_candidaturas_caducidad (fecha_caducidad)
 ) ENGINE=InnoDB;
 
--- Cursos y chefs iniciales del prototipo Bolt. Las imágenes se pueden subir desde administración.
 INSERT INTO cocineros (nombre, especialidad, biografia, nota, imagen) VALUES
 ('Zendaya Campbel', 'Cocina mexicana y española', 'Cocina de mercado, salsas profundas y recetas que reúnen a todo el mundo en la mesa.', 5.0, 'assets/images/CHEF1.jpg'),
 ('Mark Rodriguez', 'Cocina coreana', 'Enseña fermentos, fuego y equilibrio para cocinar Corea con confianza.', 4.8, 'assets/images/CHEF2.jpg'),
