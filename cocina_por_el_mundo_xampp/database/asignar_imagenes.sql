@@ -8,6 +8,6 @@ UPDATE cocineros SET imagen = 'assets/images/CHEF4.jpg' WHERE nombre = 'Dina Sat
 
 UPDATE cursos SET imagen = 'assets/images/comida_corea.jpg' WHERE slug = 'cocina-coreana-tradicional';
 UPDATE cursos SET imagen = 'assets/images/comida_japo.jpg' WHERE slug = 'fundamentos-cocina-japonesa';
--- El curso mexicano queda sin imagen porque no se ha facilitado una fotografía mexicana.
+UPDATE cursos SET imagen = 'assets/images/comida_mexicana.jpg' WHERE slug = 'cocina-mexicana-raiz';
 UPDATE cursos SET imagen = 'assets/images/comida_españa.jpg' WHERE slug = 'clasicos-cocina-espanola';
 UPDATE cursos SET imagen = 'assets/images/comida_china.jpg' WHERE slug = 'secretos-de-la-cocina-china';
